@@ -1,0 +1,31 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.font-bangla {
+    font-family: "Hind Siliguri", sans-serif;
+}
+
+.active {
+    background-color: #422AD5 !important; /* Indigo Color */
+    color: white !important;
+    border-color: #422AD5 !important
+};
+
+
+/* const removeActive = () => {
+    const lessonButtons = document.querySelectorAll(".lesson-btn")
+    lessonButtons.forEach ((btn) => btn.classList.remove("active"));
+}; */
+
+/* const loadLevelWord = (id) => {
+    const url = `https://openapi.programming-hero.com/api/level/${id}`
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            removeActive();
+            const clickBtn = document.getElementById(`lesson-btn-${id}`)
+            clickBtn.classList.add("active")
+            displayLevelWord(data.data)
+        })
+}; */
