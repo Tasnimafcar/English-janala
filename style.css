@@ -7,10 +7,13 @@
 }
 
 .active {
-    background-color: #422AD5 !important; /* Indigo Color */
+    background-color: #422AD5 !important;
+    /* Indigo Color */
     color: white !important;
     border-color: #422AD5 !important
-};
+}
+
+;
 
 
 /* const removeActive = () => {

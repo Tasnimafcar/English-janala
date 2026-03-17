@@ -115,19 +115,19 @@
     </section>
 
     <section class="flex justify-center mt-10">
-    <div class="join border border-gray-400 focus-within:border-[#00BCFF] focus-within:ring-1 focus-within:ring-[#00BCFF] rounded-xl overflow-hidden transition-all">
-        <div class="flex items-center px-4 bg-white">
-            <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+        <div
+            class="join border border-gray-400 focus-within:border-[#00BCFF] focus-within:ring-1 focus-within:ring-[#00BCFF] rounded-xl overflow-hidden transition-all">
+            <div class="flex items-center px-4 bg-white">
+                <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+            </div>
+            <input id="Search-input" type="text" placeholder="Search vocabulary..."
+                class="join-item input border-none outline-none focus:outline-none focus:ring-0 w-full max-w-xs px-2"
+                required />
+            <button id="Search-btn" class="join-item btn bg-[#4A3AFF] hover:bg-[#3b2ecf] text-white border-none px-6">
+                Search
+            </button>
         </div>
-        <input id="Search-input" type="text" 
-               placeholder="Search vocabulary..." 
-               class="join-item input border-none outline-none focus:outline-none focus:ring-0 w-full max-w-xs px-2" 
-               required />
-        <button id="Search-btn" class="join-item btn bg-[#4A3AFF] hover:bg-[#3b2ecf] text-white border-none px-6">
-            Search
-        </button>
-    </div>
-</section>
+    </section>
 
     <section id="spinner" class="flex justify-center items-center py-10 hidden">
         <span class="loading loading-infinity loading-xl"></span>
@@ -158,6 +158,87 @@
             </div>
         </div>
     </dialog>
+
+    <div class="bg-gray-50 min-h-screen py-20">
+
+        <section class="max-w-6xl mx-auto px-4 mb-20">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold">
+                    <span class="text-cyan-500">Frequently</span> Asked Questions
+                </h2>
+            </div>
+
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <div class="collapse collapse-plus bg-white border border-gray-200 rounded-xl shadow-sm">
+                    <input type="radio" name="faq-accordion" checked="checked" />
+                    <div class="collapse-title text-lg font-semibold">
+                        1. How can I start learning English on this website?
+                    </div>
+                    <div class="collapse-content text-gray-500">
+                        <p>You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also
+                            offer structured courses to guide you step by step.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white border border-gray-200 rounded-xl shadow-sm">
+                    <input type="radio" name="faq-accordion" />
+                    <div class="collapse-title text-lg font-semibold">
+                        2. Is this website free to use?
+                    </div>
+                    <div class="collapse-content text-gray-500">
+                        <p>Yes, our basic resources are completely free for everyone.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white border border-gray-200 rounded-xl shadow-sm">
+                    <input type="radio" name="faq-accordion" />
+                    <div class="collapse-title text-lg font-semibold">
+                        3. Do I need to create an account?
+                    </div>
+                    <div class="collapse-content text-gray-500">
+                        <p>Registration is optional but recommended to track your progress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-blue-50/30 border-t border-gray-200 py-6">
+            <div class="max-w-[1440px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-start gap-4">
+                <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[20px] font-semibold text-gray-800 leading-none">English</span>
+                        <img class="w-8 h-8 object-contain" src="./english-janala-resources/assets/logo.png" alt="logo">
+                        <span class="font-bangla text-[20px] text-cyan-500 leading-none">জানালা</span>
+                    </div>
+                    <p class="text-base font-medium text-gray-800 leading-tight font-bangla">ইংরেজি শিখুন সহজে</p>
+                    <p class="text-[14px] text-gray-800">Providing ED-Tech Applications since 2025</p>
+                </div>
+
+                <div class="flex justify-center">
+                    <p class="text-[14px] text-gray-500 font-medium mt-[4px] md:mt-[6px]">
+                        © 2026 <span class="text-cyan-600">English Janala</span>. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end gap-2">
+                    <div class="flex flex-col items-start gap-2">
+                        <span class="text-[10px] font-bold text-gray-400 tracking-widest uppercase leading-none">FOLLOW
+                            US</span>
+                        <div class="flex gap-4 text-xl text-gray-600">
+                            <a href="#" class="hover:text-blue-600 transition-all"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="hover:text-red-600 transition-all"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="hover:text-pink-600 transition-all"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="hover:text-black transition-all"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>

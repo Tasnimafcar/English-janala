@@ -3,6 +3,12 @@ const createElements = (arr) => {
     return (htmlElements.join(" "));
 };
 
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "en-EN"; // English
+    window.speechSynthesis.speak(utterance);
+};
+
 const manageSpinner = (status) => {
     if (status === true) {
         document.getElementById("spinner").classList.remove("hidden");
@@ -119,7 +125,7 @@ const displayLevelWord = (words) => {
             <div class="font-bangla font-semibold text-[28px]">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি।"} / ${word.pronunciation ? word.pronunciation : "উচ্চারণ পাওয়া যায়নি।"}"</div>
             <div class="flex justify-between items-center">
                 <button onclick ="loadWordDetail(${word.id})" class="btn ml-6 bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-circle-info"></i></button>
-                <button class="btn mr-6 bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
+                <button onclick = "pronounceWord('${word.word}')" class="btn mr-6 bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
             </div>
         </div>
         `
@@ -149,14 +155,14 @@ loadlessons();
 document.getElementById("Search-btn").addEventListener("click", () => {
     removeActive();
     const input = document.getElementById("Search-input");
-    const searchValue = input.value.trim().toLowerCase(); 
+    const searchValue = input.value.trim().toLowerCase();
     console.log(searchValue);
     fetch("https://openapi.programming-hero.com/api/words/all")
-    .then((res) => res.json())
-    .then((data) => {
-        const allwords = data.data
-        console.log(allwords);
-        const filterWords = allwords.filter(word => word.word.toLowerCase().includes(searchValue));
-        displayLevelWord(filterWords)
-    });
+        .then((res) => res.json())
+        .then((data) => {
+            const allwords = data.data
+            console.log(allwords);
+            const filterWords = allwords.filter(word => word.word.toLowerCase().includes(searchValue));
+            displayLevelWord(filterWords)
+        });
 });
